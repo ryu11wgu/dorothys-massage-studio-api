@@ -1,3 +1,19 @@
 spring:
   application:
     name: dorothys-massage-studio-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dorothys_massage_studio
+    username: dorothy_app
+    password: dev_password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
