@@ -3,9 +3,9 @@ spring:
     name: dorothys-massage-studio-api
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/dorothys_massage_studio}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/dorothys_massage_studio
+    username: your_database_username
+    password: your_database_password
 
   jpa:
     hibernate:
