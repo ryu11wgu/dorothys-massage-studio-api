@@ -89,9 +89,9 @@ Example local configuration:
 ```yaml
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/dorothys_massage_studio
-    username: dorothy_app
-    password: dev_password
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/dorothys_massage_studio}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
