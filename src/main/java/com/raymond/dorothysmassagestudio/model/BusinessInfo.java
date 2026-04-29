@@ -55,7 +55,4 @@ public class BusinessInfo {
     @OrderColumn(name = "paragraph_order")
     @Column(name = "paragraph", columnDefinition = "TEXT", nullable = false)
     private List<String> homeIntroParagraphs = new ArrayList<>();
-
-    @Column(name = "contact_intro", columnDefinition = "TEXT", nullable = false)
-    private String contactIntro;
 }

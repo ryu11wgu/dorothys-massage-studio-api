@@ -15,8 +15,7 @@ public class BusinessInfoMapper {
                 businessInfo.getPhoneHref(),
                 businessInfo.getAddressLines(),
                 businessInfo.getHomeIntroTitle(),
-                businessInfo.getHomeIntroParagraphs(),
-                businessInfo.getContactIntro()
+                businessInfo.getHomeIntroParagraphs()
         );
     }
 }
