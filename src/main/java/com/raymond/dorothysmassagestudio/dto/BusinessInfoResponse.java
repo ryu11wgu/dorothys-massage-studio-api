@@ -9,6 +9,7 @@ public record BusinessInfoResponse(
         String phoneHref,
         List<String> addressLines,
         String homeIntroTitle,
-        List<String> homeIntroParagraphs
+        List<String> homeIntroParagraphs,
+        List<BusinessHourResponse> businessHours
 ) {
 }

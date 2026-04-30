@@ -1,5 +1,6 @@
 package com.raymond.dorothysmassagestudio.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -8,6 +9,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
 import jakarta.persistence.OrderColumn;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -55,4 +58,8 @@ public class BusinessInfo {
     @OrderColumn(name = "paragraph_order")
     @Column(name = "paragraph", columnDefinition = "TEXT", nullable = false)
     private List<String> homeIntroParagraphs = new ArrayList<>();
+
+    @OneToMany(mappedBy = "businessInfo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("displayOrder ASC")
+    private List<BusinessHour> businessHours = new ArrayList<>();
 }
