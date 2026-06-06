@@ -3,7 +3,7 @@ spring:
     name: dorothys-massage-studio-api
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/dorothys_massage_studio}
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
 
@@ -16,4 +16,4 @@ spring:
         format_sql: true
 
 server:
-  port: 8080
+  port: ${PORT:8080}
