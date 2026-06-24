@@ -25,4 +25,4 @@ public class BusinessInfoController {
     public BusinessInfoResponse getBusinessInfo() {
         return businessInfoService.getBusinessInfo();
     }
-}git
+}
