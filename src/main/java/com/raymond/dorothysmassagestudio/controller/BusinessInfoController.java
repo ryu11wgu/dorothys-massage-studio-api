@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://dorothysmassagestudio-tgqy.vercel.app",
+        "https://www.dorothysmassagestudio.com",
+        "https://dorothysmassagestudio.com"
+})
 public class BusinessInfoController {
 
     private final BusinessInfoService businessInfoService;
@@ -20,4 +25,4 @@ public class BusinessInfoController {
     public BusinessInfoResponse getBusinessInfo() {
         return businessInfoService.getBusinessInfo();
     }
-}
+}git
